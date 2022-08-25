@@ -3,17 +3,36 @@ html {
 }
 
 body {
+  padding: 30px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Arial", "Georgia", sans-serif;
   font-size: 1rem;
   line-height: 1.62rem;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.primary-font {
+  font-family: "Arial";
+}
+
+.secondary-font {
+  font-family: "Georgia";
+}
+
+.bold {
+  font-weight: 700;
+}
+
+///arrange classes
+///
+.display-none {
+  display: none;
+}
+
+.display-center {
+  text-align: center;
 }
 
 //Colors - Configurable
@@ -31,6 +50,14 @@ $Secondary-Color: #01a198;
   background-color: $Secondary-Color;
 }
 
+.primary-color {
+  color: $Primary-color;
+}
+
+.secondary-color {
+  color: $Secondary-Color;
+}
+
 //Colors - Non Configurable
 $UI-Dark-Gray: #191919;
 $UI-Medium-Gray: #575757;
@@ -46,7 +73,7 @@ $Danger: #d3302e;
 //Colors- Basic
 
 $Black: #000000;
-$White: #9a9a9a;
+$White: #ffffff;
 
 ////Type - Reading
 ///
@@ -57,7 +84,7 @@ h1 {
   line-height: 3.5rem;
 }
 
-:matches(.heading) h1 {
+h1.heading {
   font-size: 2.56rem;
   line-height: 3rem;
 }
@@ -91,13 +118,13 @@ h6 {
 //// Mobile
 ///
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 
-  :matches(.heading) h1 {
+  h1.heading {
     font-size: 1.75rem;
     line-height: 2rem;
   }
@@ -132,12 +159,12 @@ p {
   font-size: 1rem;
 }
 
-:matches(.small)p {
+p.small {
   font-size: 0.93rem;
   line-height: 1.62rem;
 }
 
-:matches(.tiny)p {
+p.tiny {
   font-size: 0.75rem;
   line-height: 1.18rem;
 }
@@ -147,28 +174,49 @@ a {
   line-height: 1.62rem;
 }
 
-:matches(.small)a {
+a.small {
   font-size: 0.93rem;
   line-height: 1.62rem;
 }
 
-:matches(.tiny)a {
+a.tiny {
   font-size: 0.75rem;
   line-height: 1.18rem;
 }
 
 //Buttons
 
+.code-button {
+  padding: 5px;
+  width: 202px;
+  height: 48px;
+  /* Base-White */
+  background: $White;
+  color: $Primary-color;
+  /* UI Grays/UI-Dark-Gray */
+  border: 1px dashed;
+  border-color: $UI-Dark-Gray;
+  border-radius: 4px;
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    li {
+      width: 50%;
+      padding: 5px;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
 //Tiny
 
 .tiny-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: none;
   padding: 4px 16px;
-  gap: 10px;
-  position: absolute;
   width: 60px;
   height: 27px;
   border-radius: 4px;
@@ -178,7 +226,7 @@ a {
 //Small
 
 .play-button {
-  position: absolute;
+  border: none;
   width: 48px;
   height: 48px;
   border-radius: 4px;
@@ -186,13 +234,8 @@ a {
 }
 
 .sm-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: none;
   padding: 4px 40px;
-  gap: 10px;
-  position: absolute;
   width: 182px;
   height: 30px;
   border-radius: 4px;
@@ -202,13 +245,7 @@ a {
 .sm-button-ol {
   border: 1px solid;
   border-color: $Primary-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 4px 40px;
-  gap: 10px;
-  position: absolute;
   width: 182px;
   height: 30px;
   border-radius: 4px;
@@ -218,13 +255,8 @@ a {
 //Medium
 
 .md-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  gap: 10px;
-  position: absolute;
+  border: none;
+  padding: 10px 40px;
   width: 202px;
   height: 48px;
   border-radius: 4px;
@@ -234,13 +266,7 @@ a {
 .md-button-ol {
   border: 1px solid;
   border-color: $Primary-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  gap: 10px;
-  position: absolute;
+  padding: 10px 40px;
   width: 202px;
   height: 48px;
   border-radius: 4px;
@@ -250,13 +276,8 @@ a {
 //Big
 
 .lg-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  gap: 10px;
-  position: absolute;
+  border: none;
+  padding: 10px 20px;
   width: 162px;
   height: 62px;
   border-radius: 4px;
@@ -266,13 +287,7 @@ a {
 .lg-button-ol {
   border: 1px solid;
   border-color: $Primary-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  gap: 10px;
-  position: absolute;
+  padding: 10px 20px;
   width: 162px;
   height: 62px;
   border-radius: 4px;

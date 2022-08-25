@@ -1,0 +1,79 @@
+@use "globals";
+
+//Toplist Panel
+.toplist-panel-h {
+  padding: 0px;
+  min-height: 363px;
+  border: 1px solid;
+  border-color: globals.$UI-Light-Gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.toplist-panel {
+  padding: 30px;
+  width: 100%;
+
+  background: globals.$White;
+}
+
+.toplist-panel-legal {
+  border-top: 1px solid;
+  border-width: 1px;
+  border-color: globals.$UI-Light-Gray;
+  padding: 20px;
+
+  /* UI Grays/UI-Shade-Gray */
+
+  background: globals.$UI-Shade-Gray;
+}
+
+//Badge
+.badge {
+  width: 150px;
+  height: 175px;
+  align-items: center;
+}
+
+.elipse {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 10000px;
+
+  /* Base-White */
+
+  /* Primary-Color */
+  border: 6px solid;
+  border-color: globals.$Primary-color;
+}
+
+.image-container {
+  margin-top: 7.69px;
+  width: 134.62px;
+  height: 134.62px;
+  border-radius: 10000px;
+}
+
+.badgeIcon {
+  margin-top: 117.31px;
+  position: absolute;
+}
+
+///Brand Rating
+///
+.rating {
+  margin-right: 9.38px;
+}
+.pointsList {
+  ul {
+    text-align: left;
+    font-family: "Georgia";
+    font-size: 0.75rem;
+    line-height: 1.18rem;
+  }
+
+  li {
+    margin-top: 8px;
+  }
+}
