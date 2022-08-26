@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import Stack from "react-bootstrap/Stack";
 import TopListPanel from "./components/TopListPanel";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
@@ -126,6 +125,8 @@ function App() {
           </Container>
         </TopListPanel>
       )}
+
+      <div className="spacer-lg"></div>
     </div>
   );
 }
