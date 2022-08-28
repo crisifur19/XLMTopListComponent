@@ -43,12 +43,12 @@ export default function OfferButton({
       <div className="spacer-xs"></div>
       <section className="dC">
         <button
-          className="md-button secondary"
+          className="md-button secondary secondary-font"
           onClick={() => {
             window.location.assign(affiliateLink);
           }}
         >
-          <p className=" secondary-font">Visit Site</p>
+          Visit Site
         </button>
       </section>
     </Stack>

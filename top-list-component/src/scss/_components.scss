@@ -60,6 +60,40 @@
   position: absolute;
 }
 
+@media screen and (max-width: 768px) {
+  //Badge
+  .badge {
+    width: 116px;
+    height: 141px;
+    align-items: center;
+  }
+
+  .elipse {
+    position: absolute;
+    width: 116px;
+    height: 116px;
+    border-radius: 10000px;
+
+    /* Base-White */
+
+    /* Primary-Color */
+    border: 4px solid;
+    border-color: globals.$Primary-color;
+  }
+
+  .image-container {
+    margin-top: 6.3px;
+    width: 104.1px;
+    height: 104.1px;
+    border-radius: 10000px;
+  }
+
+  .badgeIcon {
+    margin-top: 85.05px;
+    position: absolute;
+  }
+}
+
 ///Brand Rating
 ///
 .rating {

@@ -25,7 +25,6 @@ function App() {
   const windowRezise = useCallback(
     async (windowWidth) => {
       window.onresize = () => setWindowSize(window.screen.width);
-
       if (windowWidth < 992) {
         const componentsToRearrange = document.getElementsByClassName("oF");
         for (let index = 0; index < componentsToRearrange.length; index++) {
@@ -67,9 +66,9 @@ function App() {
     windowRezise(windowSize);
   }, [windowRezise]);
 
-  if (components) {
-    console.log(components.contents[0]);
-  }
+  // if (components) {
+  //   console.log(components.contents[0]);
+  // }
 
   return (
     <div className="App">
