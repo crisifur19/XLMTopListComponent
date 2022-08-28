@@ -208,6 +208,39 @@ a.tiny {
       p {
         width: 100%;
       }
+
+      path {
+        fill: #575757;
+      }
+    }
+  }
+}
+
+.code-button-clicked {
+  padding: 5px;
+  width: 202px;
+  height: 48px;
+  /* Base-White */
+  background: $Primary-color;
+  color: $White;
+  /* UI Grays/UI-Dark-Gray */
+  border: 1px dashed;
+  border-color: $UI-Dark-Gray;
+  border-radius: 4px;
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    li {
+      width: 50%;
+      padding: 5px;
+      p {
+        width: 100%;
+      }
+      path {
+        fill: $White;
+      }
     }
   }
 }
